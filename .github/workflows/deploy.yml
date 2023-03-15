@@ -17,9 +17,10 @@ jobs:
         with:
           node-version: 16
           cache: 'npm'
-      - run: cd ./app
-      - run: npm ci
-      - run: npm run build
+      - run: |
+        cd ./app \
+        npm ci \
+        npm run build
 
       - name: Publish to Cloudflare Pages
         uses: cloudflare/pages-action@v1
