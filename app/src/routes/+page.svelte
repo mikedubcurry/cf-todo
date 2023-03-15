@@ -1,2 +1,2 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<h1>Todo Cloudflare</h1>
+<p>Visit <a href="https://developers.cloudflare.com">developers.cloudflare.com</a> to read the documentation</p>
