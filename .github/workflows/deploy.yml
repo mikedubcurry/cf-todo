@@ -24,10 +24,9 @@ jobs:
           npm run build;
 
       - name: Publish to Cloudflare Pages
-        working-directory: ./app
         uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: d5d4a686432762d8a717a062688b2d4d
           projectName: todo-app
-          directory: ./build
+          directory: ./app/build
