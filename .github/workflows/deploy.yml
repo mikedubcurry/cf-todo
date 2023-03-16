@@ -21,7 +21,7 @@ jobs:
         working-directory: ./app
         run: >
           npm ci &&
-          npm run build;
+          npm run build && ls;
 
       - name: Publish to Cloudflare Pages
         uses: cloudflare/pages-action@v1
