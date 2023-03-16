@@ -28,5 +28,5 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: d5d4a686432762d8a717a062688b2d4d
-          projectName: todo_app
+          projectName: todo-app
           directory: ./app/build
