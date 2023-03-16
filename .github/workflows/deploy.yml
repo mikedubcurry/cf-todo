@@ -18,6 +18,7 @@ jobs:
           node-version: 16
           cache: 'npm'
       - name: build app
+        working-directory: ./app
         run: >
           npm ci &&
           npm run build;
@@ -29,3 +30,4 @@ jobs:
           accountId: d5d4a686432762d8a717a062688b2d4d
           projectName: todo-app
           directory: ./build
+          workingDirectory: ./app
