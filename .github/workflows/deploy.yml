@@ -14,12 +14,12 @@ jobs:
       # Run a build step here if your project requires
       - name: set up node
         uses: actions/setup-node@v3
-        workspace: ./app
+        working-directory: ./app
         with:
           node-version: 16
           cache: 'npm'
       - name: build app
-        workspace: ./app
+        working-directory: ./app
         run: >
           npm ci; \
           npm run build;
