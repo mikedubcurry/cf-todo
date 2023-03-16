@@ -7,6 +7,8 @@ jobs:
       contents: read
       deployments: write
     name: Publish to Cloudflare Pages
+    env:
+      working-directory: ./app
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -18,13 +20,11 @@ jobs:
           node-version: 16
           cache: 'npm'
       - name: build app
-        working-directory: ./app
         run: >
           npm ci &&
           npm run build;
 
       - name: Publish to Cloudflare Pages
-        working-directory: ./app
         uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
